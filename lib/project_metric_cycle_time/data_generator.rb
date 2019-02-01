@@ -5,7 +5,8 @@ class ProjectMetricCycleTime
 
   def self.fake_metric(avg_days)
     { score: (avg_days * 24 * 3600 * 1000).to_i,
-      image: { tracked_stories: tracked_stories } }
+      image: { all_stories: tracked_stories,
+               accepted_stories: accepted_stories }}
   end
 
   def self.accepted_stories
