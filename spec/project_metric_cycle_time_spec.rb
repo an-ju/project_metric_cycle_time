@@ -24,8 +24,8 @@ RSpec.describe ProjectMetricCycleTime do
     end
 
     it 'sets image values correctly' do
-      expect(metric.image[:data][:delivered_stories].length).to eql(3)
-      expect(metric.image[:data][:delivered_stories].map { |el| el['name'] }).to include('Demo Bug 1')
+      expect(metric.image[:data][:tracked_stories].length).to eql(3)
+      expect(metric.image[:data][:tracked_stories].map { |el| el['name'] }).to include('Demo Bug 1')
     end
 
     it 'sets score' do
@@ -34,6 +34,13 @@ RSpec.describe ProjectMetricCycleTime do
 
     it 'calculates average cycle time' do
       expect(metric.score).to eql(1323564000.0)
+    end
+  end
+
+  context 'fake data' do
+    it 'creates three fake metrics' do
+      expect(described_class.fake_data).to be_a(Array)
+      expect(described_class.fake_data.length).to eql(3)
     end
   end
 end

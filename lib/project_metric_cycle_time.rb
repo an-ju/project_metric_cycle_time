@@ -1,4 +1,5 @@
 require "project_metric_cycle_time/version"
+require 'project_metric_cycle_time/data_generator'
 require 'project_metric_base'
 require 'faraday'
 
@@ -18,12 +19,12 @@ class ProjectMetricCycleTime
 
   def score
     # Average cycle time.
-    delivered_stories.inject(0.0) { |sum, s| sum + s['cycle_time_details']['total_cycle_time'] } / delivered_stories.length.to_f
+    tracked_stories.inject(0.0) { |sum, s| sum + s['cycle_time_details']['total_cycle_time'] } / tracked_stories.length.to_f
   end
 
   def image
     { chartType: 'story_overall',
-      data: { delivered_stories: extend_stories(delivered_stories),
+      data: { tracked_stories: extend_stories(tracked_stories),
               other_stories: extend_stories(other_stories)}}
   end
 
@@ -41,7 +42,7 @@ class ProjectMetricCycleTime
     @tracker_cycle_time = JSON.parse(@conn.get("projects/#{@project}/stories?fields=cycle_time_details").body)
   end
 
-  def delivered_stories
+  def tracked_stories
     @tracker_cycle_time.select { |s| s['cycle_time_details'].key? 'total_cycle_time' }
   end
 
