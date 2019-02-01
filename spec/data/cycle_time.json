@@ -16,15 +16,31 @@
     }
   },
   {
+    "id": 160837058,
+    "cycle_time_details": {
+      "total_cycle_time": 97000,
+      "started_time": 19000,
+      "started_count": 1,
+      "finished_time": 63000,
+      "finished_count": 1,
+      "delivered_time": 15000,
+      "delivered_count": 1,
+      "rejected_time": 0,
+      "rejected_count": 0,
+      "story_id": 160837058,
+      "kind": "cycle_time_details"
+    }
+  },
+  {
     "id": 160837072,
     "cycle_time_details": {
-      "total_cycle_time": 407809000,
-      "started_time": 407809000,
+      "total_cycle_time": 421626000,
+      "started_time": 421622000,
       "started_count": 1,
-      "finished_time": 0,
-      "finished_count": 0,
-      "delivered_time": 0,
-      "delivered_count": 0,
+      "finished_time": 1000,
+      "finished_count": 1,
+      "delivered_time": 3000,
+      "delivered_count": 1,
       "rejected_time": 0,
       "rejected_count": 0,
       "story_id": 160837072,
@@ -32,26 +48,11 @@
     }
   },
   {
-    "id": 160837077,
-    "cycle_time_details": {
-      "total_cycle_time": 9000,
-      "started_time": 9000,
-      "started_count": 1,
-      "finished_time": 0,
-      "finished_count": 0,
-      "delivered_time": 0,
-      "delivered_count": 0,
-      "rejected_time": 0,
-      "rejected_count": 0,
-      "story_id": 160837077,
-      "kind": "cycle_time_details"
-    }
-  },
-  {
     "id": 160837087,
     "cycle_time_details": {
-      "started_time": 0,
-      "started_count": 0,
+      "total_cycle_time": 1000,
+      "started_time": 1000,
+      "started_count": 1,
       "finished_time": 0,
       "finished_count": 0,
       "delivered_time": 0,
@@ -78,32 +79,50 @@
     }
   },
   {
-    "id": 160837058,
+    "id": 162710886,
     "cycle_time_details": {
-      "started_time": 0,
-      "started_count": 0,
+      "total_cycle_time": 578000,
+      "started_time": 578000,
+      "started_count": 1,
       "finished_time": 0,
       "finished_count": 0,
       "delivered_time": 0,
       "delivered_count": 0,
       "rejected_time": 0,
       "rejected_count": 0,
-      "story_id": 160837058,
+      "story_id": 162710886,
       "kind": "cycle_time_details"
     }
   },
   {
     "id": 163507032,
     "cycle_time_details": {
-      "started_time": 0,
-      "started_count": 0,
+      "total_cycle_time": 575000,
+      "started_time": 2000,
+      "started_count": 1,
+      "finished_time": 573000,
+      "finished_count": 1,
+      "delivered_time": 0,
+      "delivered_count": 0,
+      "rejected_time": 0,
+      "rejected_count": 0,
+      "story_id": 163507032,
+      "kind": "cycle_time_details"
+    }
+  },
+  {
+    "id": 160837077,
+    "cycle_time_details": {
+      "total_cycle_time": 9000,
+      "started_time": 9000,
+      "started_count": 1,
       "finished_time": 0,
       "finished_count": 0,
       "delivered_time": 0,
       "delivered_count": 0,
       "rejected_time": 0,
       "rejected_count": 0,
-      "story_id": 163507032,
+      "story_id": 160837077,
       "kind": "cycle_time_details"
     }
   },
@@ -149,21 +168,6 @@
       "rejected_time": 0,
       "rejected_count": 0,
       "story_id": 161909121,
-      "kind": "cycle_time_details"
-    }
-  },
-  {
-    "id": 162710886,
-    "cycle_time_details": {
-      "started_time": 0,
-      "started_count": 0,
-      "finished_time": 0,
-      "finished_count": 0,
-      "delivered_time": 0,
-      "delivered_count": 0,
-      "rejected_time": 0,
-      "rejected_count": 0,
-      "story_id": 162710886,
       "kind": "cycle_time_details"
     }
   }
