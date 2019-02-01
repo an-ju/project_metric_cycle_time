@@ -43,5 +43,12 @@ RSpec.describe ProjectMetricCycleTime do
       expect(described_class.fake_data).to be_a(Array)
       expect(described_class.fake_data.length).to eql(3)
     end
+
+    it 'creates the right metric' do
+      metric = described_class.fake_data.first
+      expect(metric[:image]).not_to be_nil
+      expect(metric[:score]).not_to be_nil
+      expect(metric[:image][:data]).not_to be_nil
+    end
   end
 end
