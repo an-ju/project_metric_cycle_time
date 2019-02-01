@@ -24,8 +24,7 @@ class ProjectMetricCycleTime
 
   def image
     { chartType: 'story_overall',
-      data: { tracked_stories: extend_stories(tracked_stories),
-              other_stories: extend_stories(other_stories)}}
+      data: { tracked_stories: extend_stories(tracked_stories) }}
   end
 
   def obj_id
@@ -44,10 +43,6 @@ class ProjectMetricCycleTime
 
   def tracked_stories
     @tracker_cycle_time.select { |s| s['cycle_time_details'].key? 'total_cycle_time' }
-  end
-
-  def other_stories
-    @tracker_cycle_time.reject { |s| s['cycle_time_details'].key? 'total_cycle_time' }
   end
 
   def extend_stories(stories)
