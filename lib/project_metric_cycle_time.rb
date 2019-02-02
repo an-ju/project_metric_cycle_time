@@ -19,7 +19,7 @@ class ProjectMetricCycleTime
 
   def score
     # Average cycle time.
-    tracked_stories.inject(0.0) { |sum, s| sum + s['cycle_time_details']['total_cycle_time'] } / tracked_stories.length.to_f
+    accepted_stories.inject(0.0) { |sum, s| sum + cycle_time(s) } / accepted_stories.length.to_f
   end
 
   def image
@@ -55,5 +55,9 @@ class ProjectMetricCycleTime
       linked_story = @tracker_stories.find { |s| s['id'].eql? story['id']}
       linked_story.nil? ? story : story.update(linked_story)
     end
+  end
+
+  def cycle_time(s)
+    s['cycle_time_details']['total_cycle_time'] - s['cycle_time_details']['delivered_time']
   end
 end
